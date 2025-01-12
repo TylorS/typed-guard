@@ -1,14 +1,12 @@
-import {
-  type Cause,
-  type Context,
-  Effect,
-  type Layer,
-  Option,
-  Pipeable,
-  type Predicate,
-  type Runtime,
-  Schema,
-} from 'effect'
+import type * as Cause from 'effect/Cause'
+import type * as Context from 'effect/Context'
+import * as Effect from 'effect/Effect'
+import type * as Layer from 'effect/Layer'
+import * as Option from 'effect/Option'
+import * as Pipeable from 'effect/Pipeable'
+import type * as Predicate from 'effect/Predicate'
+import type * as Runtime from 'effect/Runtime'
+import * as Schema from 'effect/Schema'
 import { dual } from 'effect/Function'
 import type { ParseOptions } from 'effect/SchemaAST'
 

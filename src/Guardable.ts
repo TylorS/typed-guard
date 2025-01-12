@@ -1,4 +1,4 @@
-import { Pipeable } from 'effect'
+import * as Pipeable from 'effect/Pipeable'
 import { ExtensibleFunction } from './ExtensibleFunction.js'
 import type { Guard } from './Guard.js'
 
