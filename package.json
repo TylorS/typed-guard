@@ -1,6 +1,6 @@
 {
   "name": "@typed/guard",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Guards with Effect",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
