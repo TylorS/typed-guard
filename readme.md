@@ -73,7 +73,7 @@ const stringToLength = (s: string) =>
   Effect.succeed(s.length > 1 ? Option.some(s.length) : Option.none())
 
 // Compose them together
-const composed: Guard<number, number> = Guard.compose(isPositive, stringLength)
+const composed: Guard<number, number> = Guard.compose(numberToString, stringLength)
 ```
 
 #### Filtering and Mapping
@@ -108,12 +108,14 @@ const withTaggedRecovery = Guard.catchTag(
 ```typescript
 import { Schema } from 'effect'
 
-const PersonSchema = Schema.struct({
+const PersonSchema = Schema.Struct({
   name: Schema.string,
   age: Schema.number
 })
 
 const personGuard = Guard.fromSchemaDecode(PersonSchema)
+const personGuard = Guard.fromSchemaDecodeUnknown(PersonSchema)
+const personGuard = Guard.fromSchemaEncode(PersonSchema)
 ```
 
 ## Advanced Usage
