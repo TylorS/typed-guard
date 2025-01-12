@@ -14,7 +14,7 @@ import type { ParseOptions } from 'effect/SchemaAST'
 
 export type Guard<I, O = never, E = never, R = never> = (
   input: I,
-) => Effect.Effect<Option.Option<O>, E, R> | Effect.Effect<never, E, R>
+) => Effect.Effect<Option.Option<O>, E, R>
 
 export namespace Guard {
   export type Input<T> = [T] extends [Guard<infer I, infer _R, infer _E, infer _O>] ? I : never
