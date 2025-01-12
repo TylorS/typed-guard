@@ -1,6 +1,6 @@
-import { Effect, identity, Option, pipe, Predicate, Schema } from 'effect'
+import { Effect, Option, pipe, Predicate, Schema } from 'effect'
 import { describe, expect, it } from 'vitest'
-import * as Guard from './Guard'
+import * as Guard from './Guard.js'
 
 describe('Guard', () => {
   // Helper function to run a guard and get the result

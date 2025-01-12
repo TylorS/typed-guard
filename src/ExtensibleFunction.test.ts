@@ -98,7 +98,5 @@ describe('ExtensibleFunction', () => {
     expect(composed(3)).toBe(8) // (3 + 1) * 2
   })
 
-  it('should allow class decorator', () => {
-    
-  })
+  it('should allow class decorator', () => {})
 })

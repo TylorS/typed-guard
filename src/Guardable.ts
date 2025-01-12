@@ -1,13 +1,14 @@
 import { Pipeable } from 'effect'
-import { ExtensibleFunction } from './ExtensibleFunction'
+import { ExtensibleFunction } from './ExtensibleFunction.js'
 import type { Guard } from './Guard.js'
 
 export const GUARDABLE = Symbol.for('@typed/guard/Guardable')
 export type GUARDABLE = typeof GUARDABLE
 
-export abstract class Guardable<I, O, E = never, R = never> extends ExtensibleFunction<
-  Guard<I, O, E, R>
-> implements Pipeable.Pipeable {
+export abstract class Guardable<I, O, E = never, R = never>
+  extends ExtensibleFunction<Guard<I, O, E, R>>
+  implements Pipeable.Pipeable
+{
   constructor() {
     super((input) => this[GUARDABLE](input))
   }
